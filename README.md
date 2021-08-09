@@ -93,7 +93,7 @@ these recommendations, check out [experiments/fma/inference.ipynb](experiments/f
 
 ## Documentation
 
-Documentation can be found [here]().
+Documentation can be found [here](https://TariqAHassan.github.io/wav2rec/).
 
 ## References
 

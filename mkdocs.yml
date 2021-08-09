@@ -1,0 +1,53 @@
+site_name: Wav2Rec
+repo_url: https://github.com/TariqAHassan/wav2rec
+
+theme:
+  name: "material"
+  logo: assets/images/favicon.svg
+  favicon: assets/images/favicon.ico
+  palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+nav:
+  - 'index.md'
+  - 'reference.md'
+
+copyright: Copyright &copy; 2021 - 2021 Tariq Hassan
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+      custom_templates: templates
+      watch:
+        - wav2rec/
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

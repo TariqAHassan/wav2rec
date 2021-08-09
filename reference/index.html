@@ -1,0 +1,4967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Reference 📚 - Wav2Rec</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wav2Rec" class="md-header__button md-logo" aria-label="Wav2Rec" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wav2Rec
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference 📚
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/TariqAHassan/wav2rec/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wav2Rec" class="md-nav__button md-logo" aria-label="Wav2Rec" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    Wav2Rec
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/TariqAHassan/wav2rec/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Wav2Rec 🎸
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Reference 📚
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Reference 📚
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec" class="md-nav__link">
+    wav2rec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.core" class="md-nav__link">
+    core
+  </a>
+  
+    <nav class="md-nav" aria-label="core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine" class="md-nav__link">
+    engine
+  </a>
+  
+    <nav class="md-nav" aria-label="engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine.Wav2Rec" class="md-nav__link">
+    Wav2Rec
+  </a>
+  
+    <nav class="md-nav" aria-label="Wav2Rec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine.Wav2Rec.fit" class="md-nav__link">
+    fit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine.Wav2Rec.get_projection" class="md-nav__link">
+    get_projection()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.similarity" class="md-nav__link">
+    similarity
+  </a>
+  
+    <nav class="md-nav" aria-label="similarity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.similarity.cosine_similarity" class="md-nav__link">
+    cosine_similarity()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.similarity.similarity_calculator" class="md-nav__link">
+    similarity_calculator()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.data" class="md-nav__link">
+    data
+  </a>
+  
+    <nav class="md-nav" aria-label="data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset" class="md-nav__link">
+    dataset
+  </a>
+  
+    <nav class="md-nav" aria-label="dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset" class="md-nav__link">
+    Wav2RecDataset
+  </a>
+  
+    <nav class="md-nav" aria-label="Wav2RecDataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.n_features" class="md-nav__link">
+    n_features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.get_audio_files" class="md-nav__link">
+    get_audio_files()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.load_audio" class="md-nav__link">
+    load_audio()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.scan" class="md-nav__link">
+    scan()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms" class="md-nav__link">
+    transforms
+  </a>
+  
+    <nav class="md-nav" aria-label="transforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomNoise" class="md-nav__link">
+    RandomNoise
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomNoise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomNoise.op" class="md-nav__link">
+    op()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp" class="md-nav__link">
+    RandomOp
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomOp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp.op" class="md-nav__link">
+    op()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceMean" class="md-nav__link">
+    RandomReplaceMean
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomReplaceMean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceMean.replacement" class="md-nav__link">
+    replacement()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceZero" class="md-nav__link">
+    RandomReplaceZero
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomReplaceZero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceZero.replacement" class="md-nav__link">
+    replacement()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.Resize" class="md-nav__link">
+    Resize
+  </a>
+  
+    <nav class="md-nav" aria-label="Resize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.Resize.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.nn" class="md-nav__link">
+    nn
+  </a>
+  
+    <nav class="md-nav" aria-label="nn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets" class="md-nav__link">
+    audionets
+  </a>
+  
+    <nav class="md-nav" aria-label="audionets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioImageNetwork" class="md-nav__link">
+    AudioImageNetwork
+  </a>
+  
+    <nav class="md-nav" aria-label="AudioImageNetwork">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioImageNetwork.hidden_features" class="md-nav__link">
+    hidden_features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioResnet50" class="md-nav__link">
+    AudioResnet50
+  </a>
+  
+    <nav class="md-nav" aria-label="AudioResnet50">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioResnet50.hidden_features" class="md-nav__link">
+    hidden_features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioResnet50.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioVit" class="md-nav__link">
+    AudioVit
+  </a>
+  
+    <nav class="md-nav" aria-label="AudioVit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioVit.hidden_features" class="md-nav__link">
+    hidden_features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioVit.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening" class="md-nav__link">
+    lightening
+  </a>
+  
+    <nav class="md-nav" aria-label="lightening">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet" class="md-nav__link">
+    Wav2RecNet
+  </a>
+  
+    <nav class="md-nav" aria-label="Wav2RecNet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.configure_optimizers" class="md-nav__link">
+    configure_optimizers()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.training_step" class="md-nav__link">
+    training_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.validation_step" class="md-nav__link">
+    validation_step()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.simsam" class="md-nav__link">
+    simsam
+  </a>
+  
+    <nav class="md-nav" aria-label="simsam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.simsam.SimSam" class="md-nav__link">
+    SimSam
+  </a>
+  
+    <nav class="md-nav" aria-label="SimSam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.simsam.SimSam.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.signal" class="md-nav__link">
+    signal
+  </a>
+  
+    <nav class="md-nav" aria-label="signal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.signal.dsp" class="md-nav__link">
+    dsp
+  </a>
+  
+    <nav class="md-nav" aria-label="dsp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.signal.dsp.MelSpectrogram" class="md-nav__link">
+    MelSpectrogram
+  </a>
+  
+    <nav class="md-nav" aria-label="MelSpectrogram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.signal.dsp.MelSpectrogram.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec" class="md-nav__link">
+    wav2rec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.core" class="md-nav__link">
+    core
+  </a>
+  
+    <nav class="md-nav" aria-label="core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine" class="md-nav__link">
+    engine
+  </a>
+  
+    <nav class="md-nav" aria-label="engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine.Wav2Rec" class="md-nav__link">
+    Wav2Rec
+  </a>
+  
+    <nav class="md-nav" aria-label="Wav2Rec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine.Wav2Rec.fit" class="md-nav__link">
+    fit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.engine.Wav2Rec.get_projection" class="md-nav__link">
+    get_projection()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.similarity" class="md-nav__link">
+    similarity
+  </a>
+  
+    <nav class="md-nav" aria-label="similarity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.similarity.cosine_similarity" class="md-nav__link">
+    cosine_similarity()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.core.similarity.similarity_calculator" class="md-nav__link">
+    similarity_calculator()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.data" class="md-nav__link">
+    data
+  </a>
+  
+    <nav class="md-nav" aria-label="data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset" class="md-nav__link">
+    dataset
+  </a>
+  
+    <nav class="md-nav" aria-label="dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset" class="md-nav__link">
+    Wav2RecDataset
+  </a>
+  
+    <nav class="md-nav" aria-label="Wav2RecDataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.n_features" class="md-nav__link">
+    n_features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.get_audio_files" class="md-nav__link">
+    get_audio_files()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.load_audio" class="md-nav__link">
+    load_audio()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.dataset.Wav2RecDataset.scan" class="md-nav__link">
+    scan()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms" class="md-nav__link">
+    transforms
+  </a>
+  
+    <nav class="md-nav" aria-label="transforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomNoise" class="md-nav__link">
+    RandomNoise
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomNoise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomNoise.op" class="md-nav__link">
+    op()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp" class="md-nav__link">
+    RandomOp
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomOp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomOp.op" class="md-nav__link">
+    op()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceMean" class="md-nav__link">
+    RandomReplaceMean
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomReplaceMean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceMean.replacement" class="md-nav__link">
+    replacement()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceZero" class="md-nav__link">
+    RandomReplaceZero
+  </a>
+  
+    <nav class="md-nav" aria-label="RandomReplaceZero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.RandomReplaceZero.replacement" class="md-nav__link">
+    replacement()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.Resize" class="md-nav__link">
+    Resize
+  </a>
+  
+    <nav class="md-nav" aria-label="Resize">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.data.transforms.Resize.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.nn" class="md-nav__link">
+    nn
+  </a>
+  
+    <nav class="md-nav" aria-label="nn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets" class="md-nav__link">
+    audionets
+  </a>
+  
+    <nav class="md-nav" aria-label="audionets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioImageNetwork" class="md-nav__link">
+    AudioImageNetwork
+  </a>
+  
+    <nav class="md-nav" aria-label="AudioImageNetwork">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioImageNetwork.hidden_features" class="md-nav__link">
+    hidden_features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioResnet50" class="md-nav__link">
+    AudioResnet50
+  </a>
+  
+    <nav class="md-nav" aria-label="AudioResnet50">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioResnet50.hidden_features" class="md-nav__link">
+    hidden_features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioResnet50.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioVit" class="md-nav__link">
+    AudioVit
+  </a>
+  
+    <nav class="md-nav" aria-label="AudioVit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioVit.hidden_features" class="md-nav__link">
+    hidden_features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.audionets.AudioVit.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening" class="md-nav__link">
+    lightening
+  </a>
+  
+    <nav class="md-nav" aria-label="lightening">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet" class="md-nav__link">
+    Wav2RecNet
+  </a>
+  
+    <nav class="md-nav" aria-label="Wav2RecNet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.configure_optimizers" class="md-nav__link">
+    configure_optimizers()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.training_step" class="md-nav__link">
+    training_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.lightening.Wav2RecNet.validation_step" class="md-nav__link">
+    validation_step()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.simsam" class="md-nav__link">
+    simsam
+  </a>
+  
+    <nav class="md-nav" aria-label="simsam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.simsam.SimSam" class="md-nav__link">
+    SimSam
+  </a>
+  
+    <nav class="md-nav" aria-label="SimSam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.nn.simsam.SimSam.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wav2rec.signal" class="md-nav__link">
+    signal
+  </a>
+  
+    <nav class="md-nav" aria-label="signal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.signal.dsp" class="md-nav__link">
+    dsp
+  </a>
+  
+    <nav class="md-nav" aria-label="dsp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.signal.dsp.MelSpectrogram" class="md-nav__link">
+    MelSpectrogram
+  </a>
+  
+    <nav class="md-nav" aria-label="MelSpectrogram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wav2rec.signal.dsp.MelSpectrogram.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TariqAHassan/wav2rec/edit/master/docs/reference.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="reference">Reference 📚</h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="wav2rec"></a>
+    <div class="doc doc-contents first">
+
+      <p>Wav2Rec</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="wav2rec.core" class="doc doc-heading">
+        <code>core</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.core.engine" class="doc doc-heading">
+        <code>engine</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Recommender</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.core.engine.Wav2Rec" class="doc doc-heading">
+        <code>Wav2Rec</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Waveform recommendation &amp; matching engine.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>model_path</code></td>
+        <td><code>Path</code></td>
+        <td><p>path to (training) checkpoint for <code>Wav2RecNet</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>distance_metric</code></td>
+        <td><code>str</code></td>
+        <td><p>distance metric to use for nearest neighbours search</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>normalize</code></td>
+        <td><code>bool</code></td>
+        <td><p>if <code>True</code> perform L2 normalization on all projections</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>similarity</code></td>
+        <td><code>callable</code></td>
+        <td><p>a callable which accepts two 1D arrays
+and returns a float. Must be compiled with <code>numba.jit(nopython=True)</code>.
+If <code>None</code> distances will be returned instead (see <code>distance_metric</code>).</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>batch_size</code></td>
+        <td><code>int</code></td>
+        <td><p>number of audio files to send to the Wav2Rec neural network
+model for projection simultaneously.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>num_workers</code></td>
+        <td><code>int</code></td>
+        <td><p>number of subprocesses to use when loading data from the
+dataset. See <code>torch.utils.data.dataloader.DataLoader</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>pin_memory</code></td>
+        <td><code>bool</code></td>
+        <td><p>copy tensors to CUDA memory before the data loader
+returns them.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>prefetch_factor</code></td>
+        <td><code>int</code></td>
+        <td><p>Number of samples to load in advance of each worker.
+See <code>torch.utils.data.dataloader.DataLoader</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>device</code></td>
+        <td><code>torch.device</code></td>
+        <td><p>device to run the model on.
+If <code>None</code>, the device will be selected automatically.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>verbose</code></td>
+        <td><code>bool</code></td>
+        <td><p>if <code>True</code> display a progress bar while fitting.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code>Keyword Arguments</code></td>
+        <td><p>Keyword arguments to pass to <code>NearestNeighbors</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>      <div class="admonition warnings">
+<p class="admonition-title">Warnings</p>
+<ul>
+<li>By default, this class uses <code>distance_metric='euclidean'</code> and <code>normalize=True</code>.
+  These settings have been purposefully chosen so that the distances computed
+  for nearest neighbours search accord with the default similarity metric used:
+  cosine similarity. (The euclidean distance between L2 normalized vectors is an
+  effective proxy of cosine similarity, see reference below.)</li>
+</ul>
+</div>
+<div class="admonition references">
+<p class="admonition-title">References</p>
+<ul>
+<li>https://en.wikipedia.org/wiki/Cosine_similarity</li>
+</ul>
+</div>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.core.engine.Wav2Rec.fit" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Fit the recommender to a dataset.</p>
+<p>Fitting is composed of three steps:</p>
+<div class="highlight"><pre><span></span><code>1. Iterating over all files in the dataset
+2. Computing `Wav2RecNet`` projections for each file
+3. Fitting the nearest neighbours algorithm against the projections
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>dataset</code></td>
+        <td><code>Wav2RecDataset</code></td>
+        <td><p>a dataset to fit against.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Wav2Rec</code></td>
+      <td><p>Wav2Rec</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/core/engine.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="n">Wav2RecDataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Wav2Rec</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Fit the recommender to a dataset.</span>
+
+<span class="sd">    Fitting is composed of three steps:</span>
+
+<span class="sd">        1. Iterating over all files in the dataset</span>
+<span class="sd">        2. Computing `Wav2RecNet`` projections for each file</span>
+<span class="sd">        3. Fitting the nearest neighbours algorithm against the projections</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dataset (Wav2RecDataset): a dataset to fit against.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Wav2Rec</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">all_paths</span><span class="p">,</span> <span class="n">all_projections</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Fitting&quot;</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">))</span> <span class="k">as</span> <span class="n">pbar</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">paths</span><span class="p">,</span> <span class="n">audio</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dataset2loader</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+            <span class="n">all_paths</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>
+            <span class="n">all_projections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_projection</span><span class="p">(</span><span class="n">audio</span><span class="p">))</span>
+            <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">audio</span><span class="p">))</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">paths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">all_paths</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_nneighbours</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">all_projections</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">fitted</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.core.engine.Wav2Rec.get_projection" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_projection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Get the model's projection of a waveform <code>x</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Union[torch.Tensor, np.ndarray]</code></td>
+        <td><p>a 1D array or tensor with shape <code>[FEATURES]</code>
+or a 2D array or tensor with shape <code>[BATCH, FEATURES]</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>np.ndarray</code></td>
+      <td><p>proj (np.ndarray): a projection of <code>x</code>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/core/engine.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_projection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Get the model&#39;s projection of a waveform ``x``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (np.ndarray, torch.Tensor): a 1D array or tensor with shape ``[FEATURES]``</span>
+<span class="sd">            or a 2D array or tensor with shape ``[BATCH, FEATURES]``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        proj (np.ndarray): a projection of ``x``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">inference_mode</span><span class="p">():</span>
+        <span class="n">proj</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="n">_standardize_input</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">))</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">_l2_normalize</span><span class="p">(</span><span class="n">proj</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span> <span class="k">else</span> <span class="n">proj</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.core.similarity" class="doc doc-heading">
+        <code>similarity</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Similarity</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h4 id="wav2rec.core.similarity.cosine_similarity" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Compute cosine similarity between two 1D arrays.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x1</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>a 1D array with shape <code>[FEATURES]</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>x2</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>a 1D array with shape <code>[FEATURES]</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>float</code></td>
+      <td><p>similarity (float): a similarity score on [0, 1].</p></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li><code>x1</code> and <code>x2</code> must be normalized.</li>
+</ul>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/core/similarity.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">cosine_similarity</span><span class="p">(</span><span class="n">x1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">x2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute cosine similarity between two 1D arrays.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x1 (np.ndarray): a 1D array with shape ``[FEATURES]``</span>
+<span class="sd">        x2 (np.ndarray): a 1D array with shape ``[FEATURES]``</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        similarity (float): a similarity score on [0, 1].</span>
+
+<span class="sd">    Warning:</span>
+<span class="sd">        * ``x1`` and ``x2`` must be normalized.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">_clip</span><span class="p">(</span><span class="n">x1</span> <span class="o">@</span> <span class="n">x2</span><span class="p">,</span> <span class="n">a_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">a_max</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h4 id="wav2rec.core.similarity.similarity_calculator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">similarity_calculator</span><span class="p">(</span><span class="n">X_query</span><span class="p">,</span> <span class="n">X_neighbours</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">CPUDispatcher</span><span class="p">(</span><span class="o">&lt;</span><span class="n">function</span> <span class="n">cosine_similarity</span> <span class="n">at</span> <span class="mh">0x7fb7569b0160</span><span class="o">&gt;</span><span class="p">))</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Compute the similarity of <code>X_query</code> with all entries in <code>X_neighbours</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>X_query</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>a query 2D array with shape <code>[N_QUERIES, FEATURES]</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>X_neighbours</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>a reference 2D array with shape
+<code>[N_QUERIES, N_NEIGHBOURS, FEATURES]</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>metric</code></td>
+        <td><code>Callable[[numpy.ndarray, numpy.ndarray], float]</code></td>
+        <td><p>a callable which accepts two 1D arrays
+and returns a float. Must be compiled with <code>numba.jit(nopython=True)</code>.</p></td>
+        <td><code>CPUDispatcher(&lt;function cosine_similarity at 0x7fb7569b0160&gt;)</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ndarray</code></td>
+      <td><p>sims (np.ndarray): a 2D array of similarities with shape <code>[N_QUERIES, N_NEIGHBOURS]</code>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/core/similarity.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@numba</span><span class="o">.</span><span class="n">jit</span><span class="p">(</span><span class="n">nopython</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">similarity_calculator</span><span class="p">(</span>
+    <span class="n">X_query</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">X_neighbours</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">metric</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute the similarity of ``X_query`` with all entries in ``X_neighbours``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        X_query (np.ndarray): a query 2D array with shape ``[N_QUERIES, FEATURES]``</span>
+<span class="sd">        X_neighbours (np.ndarray): a reference 2D array with shape</span>
+<span class="sd">            ``[N_QUERIES, N_NEIGHBOURS, FEATURES]``</span>
+<span class="sd">        metric (callable): a callable which accepts two 1D arrays</span>
+<span class="sd">            and returns a float. Must be compiled with ``numba.jit(nopython=True)``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        sims (np.ndarray): a 2D array of similarities with shape ``[N_QUERIES, N_NEIGHBOURS]``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n_queries</span> <span class="o">=</span> <span class="n">X_query</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">n_neighbours</span> <span class="o">=</span> <span class="n">X_neighbours</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">sims</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_queries</span><span class="p">,</span> <span class="n">n_neighbours</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">X_neighbours</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_queries</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_neighbours</span><span class="p">):</span>
+            <span class="n">sims</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">X_query</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">X_neighbours</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">sims</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="wav2rec.data" class="doc doc-heading">
+        <code>data</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Data</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.data.dataset" class="doc doc-heading">
+        <code>dataset</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Dataset</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.data.dataset.Wav2RecDataset" class="doc doc-heading">
+        <code>Wav2RecDataset</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Base Wav2Rec Dataset.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>audio_path</code></td>
+        <td><code>Path</code></td>
+        <td><p>path to a directory of caches of type <code>ext</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>sr</code></td>
+        <td><code>int</code></td>
+        <td><p>sample rate to use for each track</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>offset</code></td>
+        <td><code>int</code></td>
+        <td><p>seconds to skip in each track</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>duration</code></td>
+        <td><code>int</code></td>
+        <td><p>the duration of each track to use.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>ext</code></td>
+        <td><code>str, tuple</code></td>
+        <td><p>one or more file extensions in <code>audio_path</code> to
+filter for</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>res_type</code></td>
+        <td><code>str</code></td>
+        <td><p>resampling algorithm</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>zero_pad</code></td>
+        <td><code>bool</code></td>
+        <td><p>if <code>True</code>, automatically zero pad waveforms
+shorter than <code>n_features</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>verbose</code></td>
+        <td><code>bool</code></td>
+        <td><p>if <code>True</code> display progress bars</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="wav2rec.data.dataset.Wav2RecDataset.n_features" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">n_features</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Expected number of elements (samples) in each sample.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.dataset.Wav2RecDataset.get_audio_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_audio_files</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Generate an iterable of all eligible files in <code>audio_path</code>.</p>
+<div class="admonition yields">
+<p class="admonition-title">Yields</p>
+<p>path</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/dataset.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_audio_files</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Generate an iterable of all eligible files in ``audio_path``.</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        path</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">yield from</span> <span class="n">tqdm</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_audio_path_iter</span><span class="p">(),</span>
+        <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Scanning for Audio&quot;</span><span class="p">,</span>
+        <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+        <span class="n">total</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_audio_path_iter</span><span class="p">()),</span>
+        <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.dataset.Wav2RecDataset.load_audio" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Load an audio file from <code>path</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>path</code></td>
+        <td><code>Path</code></td>
+        <td><p>a file path to a piece of audio</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>torch.Tensor</code></td>
+      <td><p>x (np.ndarray): a mono-signaled piece of audio.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/dataset.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Load an audio file from ``path``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path (Path): a file path to a piece of audio</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        x (np.ndarray): a mono-signaled piece of audio.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;PySoundFile failed.*&quot;</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span>
+            <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+            <span class="n">sr</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sr</span><span class="p">,</span>
+            <span class="n">mono</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">offset</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">,</span>
+            <span class="n">duration</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span>
+            <span class="n">res_type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">res_type</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">zero_pad</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">zero_pad1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">target_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">n_features</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.dataset.Wav2RecDataset.scan" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Scan <code>audio_path</code> for audio files.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Wav2RecDataset</code></td>
+      <td><p>Wav2RecDataset</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/dataset.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Wav2RecDataset</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Scan ``audio_path`` for audio files.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Wav2RecDataset</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_audio_files</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">files</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">files</span> <span class="o">=</span> <span class="n">files</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No files found in &#39;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">audio_path</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.data.transforms" class="doc doc-heading">
+        <code>transforms</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Transforms</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.data.transforms.RandomNoise" class="doc doc-heading">
+        <code>RandomNoise</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Add random noise to a signal.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>alpha</code></td>
+        <td><code>tuple</code></td>
+        <td><p>a tuple to characterize a uniform distribution.
+Values drawn from this distribution will determine the
+weight given to the random noise.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code>Keyword Args</code></td>
+        <td><p>keyword arguments to pass to the
+parent class.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.RandomNoise.op" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">op</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Add random noise to <code>x</code></p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>a tensor to operate on</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>x_fuzzed (torch.Tensor): x + noise.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">op</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Add random noise to ``x``</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): a tensor to operate on</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        x_fuzzed (torch.Tensor): x + noise.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">noise_weight</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">noise_weight</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.data.transforms.RandomOp" class="doc doc-heading">
+        <code>RandomOp</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.RandomOp.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Base class for randomly applying an operation.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>p</code></td>
+        <td><code>float</code></td>
+        <td><p>probability of performing the transformation</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Base class for randomly applying an operation.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        p (float): probability of performing the transformation</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.RandomOp.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Perform <code>op()</code> on <code>x</code> with probability <code>p</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>tensor to operate on</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>torch.Tensor</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Perform ``op()`` on ``x`` with probability ``p``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): tensor to operate on</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">op</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.RandomOp.op" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">op</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Operation to perform.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>tensor to operate on</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>torch.Tensor</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">op</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Operation to perform.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): tensor to operate on</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.data.transforms.RandomReplaceMean" class="doc doc-heading">
+        <code>RandomReplaceMean</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Randomly replace part of a tensor with its mean.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.RandomReplaceMean.replacement" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">replacement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Generate replacement (mean of each batch).</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>tensor to operate on. Should be of the
+form <code>[BATCH, FEATURES]</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>a</code></td>
+        <td><code>int</code></td>
+        <td><p>start position in the tensor</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>b</code></td>
+        <td><code>int</code></td>
+        <td><p>end position in the tensor</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Union[float, torch.Tensor]</code></td>
+      <td><p>torch.Tensor</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replacement</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span>
+    <span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Generate replacement (mean of each batch).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): tensor to operate on. Should be of the</span>
+<span class="sd">            form ``[BATCH, FEATURES]``.</span>
+<span class="sd">        a (float): start position in the tensor</span>
+<span class="sd">        b (float): end position in the tensor</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">repeat_interleave</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.data.transforms.RandomReplaceZero" class="doc doc-heading">
+        <code>RandomReplaceZero</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Randomly replace part of a tensor with zero.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.RandomReplaceZero.replacement" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">replacement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Generate replacement (zero).</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>tensor to operate on. Should be of the
+form <code>[BATCH, FEATURES]</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>a</code></td>
+        <td><code>int</code></td>
+        <td><p>start position in the tensor</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>b</code></td>
+        <td><code>int</code></td>
+        <td><p>end position in the tensor</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Union[float, torch.Tensor]</code></td>
+      <td><p>torch.Tensor</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replacement</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span>
+    <span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Generate replacement (zero).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): tensor to operate on. Should be of the</span>
+<span class="sd">            form ``[BATCH, FEATURES]``.</span>
+<span class="sd">        a (float): start position in the tensor</span>
+<span class="sd">        b (float): end position in the tensor</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">0.0</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.data.transforms.Resize" class="doc doc-heading">
+        <code>Resize</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Resize a tensor.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>size</code></td>
+        <td><code>int, tuple</code></td>
+        <td><p>one or more integers</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>mode</code></td>
+        <td><code>str</code></td>
+        <td><p>resizing algorithm to use</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.data.transforms.Resize.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Resize <code>x</code> to <code>size</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>a tensor of the form <code>[BATCH, ...]</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>x_resized (torch.Tensor): <code>x</code> resized</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/data/transforms.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Resize ``x`` to ``size``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): a tensor of the form ``[BATCH, ...]``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        x_resized (torch.Tensor): ``x`` resized</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="wav2rec.nn" class="doc doc-heading">
+        <code>nn</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>NN</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.nn.audionets" class="doc doc-heading">
+        <code>audionets</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Audio-Image Networks</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.nn.audionets.AudioImageNetwork" class="doc doc-heading">
+        <code>AudioImageNetwork</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Class of networks which handle 1D waveforms by making them image-like.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>sr</code></td>
+        <td><code>int</code></td>
+        <td><p>sample rate of the audio files</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>n_mels</code></td>
+        <td><code>int</code></td>
+        <td><p>number of mel bands to construct for raw audio.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>image_size</code></td>
+        <td><code>int</code></td>
+        <td><p>size to reshape the "images" (Melspectrograms) to.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code>Keyword Args</code></td>
+        <td><p>Keyword arguments to pass to <code>MelSpectrogram()</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="wav2rec.nn.audionets.AudioImageNetwork.hidden_features" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">hidden_features</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Number of features emitted by the network.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.nn.audionets.AudioResnet50" class="doc doc-heading">
+        <code>AudioResnet50</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Resnet50-Based Audio network.</p>
+<p>This network is designed to generate features against
+melspectrogram input, using a Resnet50 model as the encoder.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>sr</code></td>
+        <td><code>int</code></td>
+        <td><p>sample rate of the audio files</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>n_mels</code></td>
+        <td><code>int</code></td>
+        <td><p>number of mel bands to construct for raw audio.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>image_size</code></td>
+        <td><code>int</code></td>
+        <td><p>size to reshape the "images" (Melspectrograms) to.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code>Keyword Arguments</code></td>
+        <td><p>keyword arguments to pass to
+the parent class.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>      <div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>Batches are normalized prior to being fed to the network in order to
+  stabilize training.</li>
+</ul>
+</div>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="wav2rec.nn.audionets.AudioResnet50.hidden_features" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">hidden_features</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Number of features emitted by the network.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.audionets.AudioResnet50.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Compute the forward pass of the network.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>an input tensor</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>torch.Tensor</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/audionets.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute the forward pass of the network.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): an input tensor</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># assume waveforms</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wav2spec</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bn</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.nn.audionets.AudioVit" class="doc doc-heading">
+        <code>AudioVit</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>ViT-Based Audio network.</p>
+<p>This network is designed to generate features against
+melspectrogram input, using a ViT model as the encoder.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>sr</code></td>
+        <td><code>int</code></td>
+        <td><p>sample rate of the audio files</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>n_mels</code></td>
+        <td><code>int</code></td>
+        <td><p>number of mel bands to construct for raw audio.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>image_size</code></td>
+        <td><code>int</code></td>
+        <td><p>size to reshape the "images" (Melspectrograms) to.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>patch_size</code></td>
+        <td><code>int</code></td>
+        <td><p>size of each patch. Must be square.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>dim</code></td>
+        <td><code>int</code></td>
+        <td><p>dimension of output following <code>nn.Linear()</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>depth</code></td>
+        <td><code>int</code></td>
+        <td><p>number of transformer blocks.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>heads</code></td>
+        <td><code>int</code></td>
+        <td><p>number of multi-head Attention layers</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>mlp_dim</code></td>
+        <td><code>int</code></td>
+        <td><p>dimensions of the multi-layer perceptron (MLP)
+in the feed forward layer of the transformer(s).</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>dim_head</code></td>
+        <td><code>int</code></td>
+        <td><p>dimensions in the head of the attention block(s)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>dropout</code></td>
+        <td><code>float</code></td>
+        <td><p>dropout rate to use. Must be on <code>[0, 1]</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>emb_dropout</code></td>
+        <td><code>float</code></td>
+        <td><p>dropout of the embedding layer. Must be
+on <code>[0, 1]</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code>Keyword Arguments</code></td>
+        <td><p>keyword arguments to pass to
+the parent class.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>      <div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>Batches are normalized prior to being fed to the network in order to
+  stabilize training.</li>
+</ul>
+</div>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="wav2rec.nn.audionets.AudioVit.hidden_features" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">hidden_features</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Number of features emitted by the network.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.audionets.AudioVit.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Compute the forward pass of the network.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>an input tensor</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>torch.Tensor</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/audionets.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute the forward pass of the network.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): an input tensor</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># assume waveforms</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wav2spec</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">net</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bn</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.nn.lightening" class="doc doc-heading">
+        <code>lightening</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Lightening Model</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.nn.lightening.Wav2RecNet" class="doc doc-heading">
+        <code>Wav2RecNet</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Unified (SimSam with Encoder) network.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>lr</code></td>
+        <td><code>float</code></td>
+        <td><p>learning rate for the model</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>encoder</code></td>
+        <td><code>AudioImageNetwork</code></td>
+        <td><p>a model which inherits from
+<code>AudioImageNetwork</code>, to be used as the encoder in <code>SimSam</code>.
+If <code>None</code>, <code>AudioResnet50</code> will be used.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code>Keyword Arguments</code></td>
+        <td><p>Keyword arguments to pass to <code>SimSam</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.lightening.Wav2RecNet.configure_optimizers" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configure_optimizers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Choose what optimizers and learning-rate schedulers to use in your optimization.
+Normally you'd need one. But in the case of GANs or similar you might have multiple.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Optimizer</code></td>
+      <td><p>Any of these 6 options.</p>
+<ul>
+<li><strong>Single optimizer</strong>.</li>
+<li><strong>List or Tuple</strong> of optimizers.</li>
+<li><strong>Two lists</strong> - The first list has multiple optimizers, and the second has multiple LR schedulers (or
+  multiple lr_dict).</li>
+<li><strong>Dictionary</strong>, with an <code>"optimizer"</code> key, and (optionally) a <code>"lr_scheduler"</code>
+  key whose value is a single LR scheduler or lr_dict.</li>
+<li><strong>Tuple of dictionaries</strong> as described above, with an optional <code>"frequency"</code> key.</li>
+<li><strong>None</strong> - Fit will run without any optimizer.</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The lr_dict is a dictionary which contains the scheduler and its associated configuration.
+The default configuration is shown below.</p>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code>lr_dict = {
+    &#39;scheduler&#39;: lr_scheduler, # The LR scheduler instance (required)
+    # The unit of the scheduler&#39;s step size, could also be &#39;step&#39;
+    &#39;interval&#39;: &#39;epoch&#39;,
+    &#39;frequency&#39;: 1, # The frequency of the scheduler
+    &#39;monitor&#39;: &#39;val_loss&#39;, # Metric for `ReduceLROnPlateau` to monitor
+    &#39;strict&#39;: True, # Whether to crash the training if `monitor` is not found
+    &#39;name&#39;: None, # Custom name for `LearningRateMonitor` to use
+}
+</code></pre></div>
+<p>Only the <code>"scheduler"</code> key is required, the rest will be set to the defaults above.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>frequency</code> value specified in a dict along with the <code>optimizer</code> key is an int corresponding
+to the number of sequential batches optimized with the specific optimizer.
+It should be given to none or to all of the optimizers.
+There is a difference between passing multiple optimizers in a list,
+and passing multiple optimizers in dictionaries with a frequency of 1:
+In the former case, all optimizers will operate on the given batch in each optimization step.
+In the latter, only one optimizer will operate on the given batch at every step.
+This is different from the <code>frequency</code> value specified in the lr_dict mentioned below.</p>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code>def configure_optimizers(self):
+    optimizer_one = torch.optim.SGD(self.model.parameters(), lr=0.01)
+    optimizer_two = torch.optim.SGD(self.model.parameters(), lr=0.01)
+    return [
+        {&#39;optimizer&#39;: optimizer_one, &#39;frequency&#39;: 5},
+        {&#39;optimizer&#39;: optimizer_two, &#39;frequency&#39;: 10},
+    ]
+</code></pre></div>
+<p>In this example, the first optimizer will be used for the first 5 steps,
+the second optimizer for the next 10 steps and that cycle will continue.
+If an LR scheduler is specified for an optimizer using the <code>lr_scheduler</code> key in the above dict,
+the scheduler will only be updated when its optimizer is being used.</p>
+</div>
+<p>Examples::</p>
+<div class="highlight"><pre><span></span><code># most cases
+def configure_optimizers(self):
+    return Adam(self.parameters(), lr=1e-3)
+
+# multiple optimizer case (e.g.: GAN)
+def configure_optimizers(self):
+    gen_opt = Adam(self.model_gen.parameters(), lr=0.01)
+    dis_opt = Adam(self.model_dis.parameters(), lr=0.02)
+    return gen_opt, dis_opt
+
+# example with learning rate schedulers
+def configure_optimizers(self):
+    gen_opt = Adam(self.model_gen.parameters(), lr=0.01)
+    dis_opt = Adam(self.model_dis.parameters(), lr=0.02)
+    dis_sch = CosineAnnealing(dis_opt, T_max=10)
+    return [gen_opt, dis_opt], [dis_sch]
+
+# example with step-based learning rate schedulers
+def configure_optimizers(self):
+    gen_opt = Adam(self.model_gen.parameters(), lr=0.01)
+    dis_opt = Adam(self.model_dis.parameters(), lr=0.02)
+    gen_sch = {&#39;scheduler&#39;: ExponentialLR(gen_opt, 0.99),
+               &#39;interval&#39;: &#39;step&#39;}  # called after each training step
+    dis_sch = CosineAnnealing(dis_opt, T_max=10) # called every epoch
+    return [gen_opt, dis_opt], [gen_sch, dis_sch]
+
+# example with optimizer frequencies
+# see training procedure in `Improved Training of Wasserstein GANs`, Algorithm 1
+# https://arxiv.org/abs/1704.00028
+def configure_optimizers(self):
+    gen_opt = Adam(self.model_gen.parameters(), lr=0.01)
+    dis_opt = Adam(self.model_dis.parameters(), lr=0.02)
+    n_critic = 5
+    return (
+        {&#39;optimizer&#39;: dis_opt, &#39;frequency&#39;: n_critic},
+        {&#39;optimizer&#39;: gen_opt, &#39;frequency&#39;: 1}
+    )
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some things to know:</p>
+<ul>
+<li>Lightning calls <code>.backward()</code> and <code>.step()</code> on each optimizer and learning rate scheduler as needed.</li>
+<li>If you use 16-bit precision (<code>precision=16</code>), Lightning will automatically handle the optimizers.</li>
+<li>If you use multiple optimizers, :meth:<code>training_step</code> will have an additional <code>optimizer_idx</code> parameter.</li>
+<li>If you use :class:<code>torch.optim.LBFGS</code>, Lightning handles the closure function automatically for you.</li>
+<li>If you use multiple optimizers, gradients will be calculated only for the parameters of current optimizer
+  at each training step.</li>
+<li>If you need to control how often those optimizers step or override the default <code>.step()</code> schedule,
+  override the :meth:<code>optimizer_step</code> hook.</li>
+</ul>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/lightening.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">configure_optimizers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Optimizer</span><span class="p">:</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lr</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">optimizer</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.lightening.Wav2RecNet.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Same as :meth:<code>torch.nn.Module.forward()</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>*args</code></td>
+        <td><code></code></td>
+        <td><p>Whatever you decide to pass into the forward method.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td><code></code></td>
+        <td><p>Keyword arguments are also possible.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>Your model's output</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/lightening.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span><span class="o">.</span><span class="n">wrapped_encoder</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.lightening.Wav2RecNet.training_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">training_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">batch_idx</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Here you compute and return the training loss and some additional metrics for e.g.
+the progress bar or logger.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>batch</code></td>
+        <td><code>Tuple[torch.Tensor, torch.Tensor]</code></td>
+        <td><p>class:<code>~torch.Tensor</code> | (:class:<code>~torch.Tensor</code>, ...) | [:class:<code>~torch.Tensor</code>, ...]):
+The output of your :class:<code>~torch.utils.data.DataLoader</code>. A tensor, tuple or list.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>batch_idx</code></td>
+        <td><code>int</code></td>
+        <td><p>Integer displaying index of this batch</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>optimizer_idx</code></td>
+        <td><code>int</code></td>
+        <td><p>When using multiple optimizers, this argument will also be present.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>hiddens(</code></td>
+        <td><code></code></td>
+        <td><p>class:<code>~torch.Tensor</code>): Passed in if
+:paramref:<code>~pytorch_lightning.core.lightning.LightningModule.truncated_bptt_steps</code> &gt; 0.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>Any of.</p>
+<ul>
+<li>:class:<code>~torch.Tensor</code> - The loss tensor</li>
+<li><code>dict</code> - A dictionary. Can include any keys, but must include the key <code>'loss'</code></li>
+<li><code>None</code> - Training will skip to the next batch</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>      <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Returning <code>None</code> is currently not supported for multi-GPU or TPU, or with 16-bit precision enabled.</p>
+</div>
+<p>In this step you'd normally do the forward pass and calculate the loss for a batch.
+You can also do fancier things like multiple forward passes or something model specific.</p>
+<p>Example::</p>
+<div class="highlight"><pre><span></span><code>def training_step(self, batch, batch_idx):
+    x, y, z = batch
+    out = self.encoder(x)
+    loss = self.loss(out, x)
+    return loss
+</code></pre></div>
+<p>If you define multiple optimizers, this step will be called with an additional
+<code>optimizer_idx</code> parameter.</p>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code># Multiple optimizers (e.g.: GANs)
+def training_step(self, batch, batch_idx, optimizer_idx):
+    if optimizer_idx == 0:
+        # do training_step with encoder
+    if optimizer_idx == 1:
+        # do training_step with decoder
+</code></pre></div>
+<p>If you add truncated back propagation through time you will also get an additional
+argument with the hidden states of the previous step.</p>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code># Truncated back-propagation through time
+def training_step(self, batch, batch_idx, hiddens):
+    # hiddens are the hidden states from the previous truncated backprop step
+    ...
+    out, hiddens = self.lstm(data, hiddens)
+    ...
+    return {&#39;loss&#39;: loss, &#39;hiddens&#39;: hiddens}
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The loss value shown in the progress bar is smoothed (averaged) over the last values,
+so it differs from the actual loss returned in train/validation step.</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/lightening.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">training_step</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">batch</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">,</span> <span class="n">loss</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">loss</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.lightening.Wav2RecNet.validation_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validation_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">batch_idx</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Operates on a single batch of data from the validation set.
+In this step you'd might generate examples or calculate anything of interest like accuracy.</p>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code># the pseudocode for these calls
+val_outs = []
+for val_batch in val_data:
+    out = validation_step(val_batch)
+    val_outs.append(out)
+validation_epoch_end(val_outs)
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>batch</code></td>
+        <td><code>Tuple[torch.Tensor, torch.Tensor]</code></td>
+        <td><p>class:<code>~torch.Tensor</code> | (:class:<code>~torch.Tensor</code>, ...) | [:class:<code>~torch.Tensor</code>, ...]):
+The output of your :class:<code>~torch.utils.data.DataLoader</code>. A tensor, tuple or list.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>batch_idx</code></td>
+        <td><code>int</code></td>
+        <td><p>The index of this batch</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>dataloader_idx</code></td>
+        <td><code>int</code></td>
+        <td><p>The index of the dataloader that produced this batch
+(only if multiple val dataloaders used)</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>Any of.</p>
+<ul>
+<li>Any object or value</li>
+<li><code>None</code> - Validation will skip to the next batch</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>      <p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code># pseudocode of order
+val_outs = []
+for val_batch in val_data:
+    out = validation_step(val_batch)
+    if defined(&#39;validation_step_end&#39;):
+        out = validation_step_end(out)
+    val_outs.append(out)
+val_outs = validation_epoch_end(val_outs)
+</code></pre></div>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code># if you have one val dataloader:
+def validation_step(self, batch, batch_idx)
+
+# if you have multiple val dataloaders:
+def validation_step(self, batch, batch_idx, dataloader_idx)
+</code></pre></div>
+<p>Examples::</p>
+<div class="highlight"><pre><span></span><code># CASE 1: A single validation dataset
+def validation_step(self, batch, batch_idx):
+    x, y = batch
+
+    # implement your own
+    out = self(x)
+    loss = self.loss(out, y)
+
+    # log 6 example images
+    # or generated text... or whatever
+    sample_imgs = x[:6]
+    grid = torchvision.utils.make_grid(sample_imgs)
+    self.logger.experiment.add_image(&#39;example_images&#39;, grid, 0)
+
+    # calculate acc
+    labels_hat = torch.argmax(out, dim=1)
+    val_acc = torch.sum(y == labels_hat).item() / (len(y) * 1.0)
+
+    # log the outputs!
+    self.log_dict({&#39;val_loss&#39;: loss, &#39;val_acc&#39;: val_acc})
+</code></pre></div>
+<p>If you pass in multiple val dataloaders, :meth:<code>validation_step</code> will have an additional argument.</p>
+<p>.. code-block:: python</p>
+<div class="highlight"><pre><span></span><code># CASE 2: multiple validation dataloaders
+def validation_step(self, batch, batch_idx, dataloader_idx):
+    # dataloader_idx tells you which dataset this is.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don't need to validate you don't need to implement this method.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the :meth:<code>validation_step</code> is called, the model has been put in eval mode
+and PyTorch gradients have been disabled. At the end of validation,
+the model goes back to training mode and gradients are enabled.</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/lightening.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">validation_step</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">batch</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;val_loss&quot;</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="n">prog_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">loss</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.nn.simsam" class="doc doc-heading">
+        <code>simsam</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>SimSam Model</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>Code adapted from https://github.com/lucidrains/byol-pytorch</li>
+</ul>
+</div>
+<div class="admonition references">
+<p class="admonition-title">References</p>
+<ul>
+<li>https://arxiv.org/abs/2006.07733</li>
+<li>https://arxiv.org/abs/2011.10566</li>
+<li>https://github.com/lucidrains/byol-pytorch</li>
+</ul>
+</div>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.nn.simsam.SimSam" class="doc doc-heading">
+        <code>SimSam</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Simple Siamese Neural Network for self-supervised
+representation learning.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>encoder</code></td>
+        <td><code>AudioImageNetwork</code></td>
+        <td><p>a model which inherits from <code>AudioImageNetwork</code>,</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>projection_size</code></td>
+        <td><code>int</code></td>
+        <td><p>dimensionality of vectors to be compared</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>projection_hidden_size</code></td>
+        <td><code>int</code></td>
+        <td><p>number of units in Multilayer Perceptron (MLP) networks</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>augment1</code></td>
+        <td><code>callable</code></td>
+        <td><p>First augmentation (yields <code>x1). If</code>None``,
+the default augmentation will be used.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>augment2</code></td>
+        <td><code>callable</code></td>
+        <td><p>Second augmentation (yield <code>x2</code>). If <code>None</code>,
+<code>augment1</code> will be used.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>      <div class="admonition references">
+<p class="admonition-title">References</p>
+<ul>
+<li>https://arxiv.org/abs/2006.07733</li>
+<li>https://arxiv.org/abs/2011.10566</li>
+<li>https://github.com/lucidrains/byol-pytorch</li>
+</ul>
+</div>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.nn.simsam.SimSam.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Compute the forward pass of the learner and the
+combined loss.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>a tensor of shape <code>[BATCH, ...]</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>loss (torch.Tensor): combined, average loss of the operation</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/nn/simsam.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute the forward pass of the learner and the</span>
+<span class="sd">    combined loss.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): a tensor of shape ``[BATCH, ...]``</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        loss (torch.Tensor): combined, average loss of the operation</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">augment1</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">augment2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="n">online_pred_1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predictor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrapped_encoder</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+    <span class="n">online_pred_2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predictor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wrapped_encoder</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="n">target_proj_1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrapped_encoder</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="o">.</span><span class="n">detach_</span><span class="p">()</span>
+        <span class="n">target_proj_2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrapped_encoder</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span><span class="o">.</span><span class="n">detach_</span><span class="p">()</span>
+
+    <span class="n">loss_1</span> <span class="o">=</span> <span class="n">_loss_fn</span><span class="p">(</span><span class="n">online_pred_1</span><span class="p">,</span> <span class="n">target_proj_2</span><span class="p">)</span>
+    <span class="n">loss_2</span> <span class="o">=</span> <span class="n">_loss_fn</span><span class="p">(</span><span class="n">online_pred_2</span><span class="p">,</span> <span class="n">target_proj_1</span><span class="p">)</span>
+
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_1</span> <span class="o">+</span> <span class="n">loss_2</span>
+    <span class="k">return</span> <span class="n">loss</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="wav2rec.signal" class="doc doc-heading">
+        <code>signal</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h3 id="wav2rec.signal.dsp" class="doc doc-heading">
+        <code>dsp</code>
+
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Digital Signal Processing</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h4 id="wav2rec.signal.dsp.MelSpectrogram" class="doc doc-heading">
+        <code>MelSpectrogram</code>
+
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Layer to compute the melspectrogram of a 1D audio waveform.</p>
+<p>This layer leverages the convolutional-based <code>torchlibrosa</code>
+library to compute the melspectrogram of an audio waveform.
+The computation can be performed efficiently on a GPU.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>sr</code></td>
+        <td><code>int</code></td>
+        <td><p>sample rate of audio</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>n_fft</code></td>
+        <td><code>int</code></td>
+        <td><p>FFT window size</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>win_length</code></td>
+        <td><code>int</code></td>
+        <td><p>length of the FFT window function</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>hop_length</code></td>
+        <td><code>int</code></td>
+        <td><p>number of samples between frames</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>f_min</code></td>
+        <td><code>float</code></td>
+        <td><p>lowest frequency (Hz)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>f_max</code></td>
+        <td><code>float</code></td>
+        <td><p>highest frequency (Hz)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>n_mels</code></td>
+        <td><code>int</code></td>
+        <td><p>number of mel bands to create</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>window</code></td>
+        <td><code>str</code></td>
+        <td><p>window function to use.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>power</code></td>
+        <td><code>float</code></td>
+        <td><p>exponent for the mel spectrogram.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>center</code></td>
+        <td><code>bool</code></td>
+        <td><p>if True, center the input signal</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>pad_mode</code></td>
+        <td><code>str</code></td>
+        <td><p>padding to use at the edges of the signal.
+(Note: this only applies if <code>center=True</code>)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>as_db</code></td>
+        <td><code>bool</code></td>
+        <td><p>if <code>True</code>, convert the output from amplitude to
+decibels.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>ref</code></td>
+        <td><code>float, str</code></td>
+        <td><p>the reference point to use when converting
+to decibels. If a <code>float</code>, the reference point will be
+used 'as is'. If a string, must be <code>'max'</code> (computed and
+applied individually for each waveform in the batch).
+(Note: this only applies if <code>as_db=True</code>.)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>amin</code></td>
+        <td><code>float</code></td>
+        <td><p>minimum threshold when converting to decibels.
+(Note: this only applies if <code>as_db=True</code>.)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>top_db</code></td>
+        <td><code>float</code></td>
+        <td><p>the maximum threshold value to use when converting
+to decibels. (Note: this only applies if <code>as_db=True</code>.)</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>normalize_db</code></td>
+        <td><code>bool</code></td>
+        <td><p>if <code>True</code>, normalize the final output
+s.t. it is on [0, 1]. (Note: requires <code>as_db=True</code>).</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h5 id="wav2rec.signal.dsp.MelSpectrogram.forward" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
+
+
+</h5>
+
+    <div class="doc doc-contents ">
+
+      <p>Compute the melspectrogram of <code>x</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>x</code></td>
+        <td><code>Tensor</code></td>
+        <td><p>2D tensor with shape <code>[BATCH, TIME]</code></p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tensor</code></td>
+      <td><p>melspec (torch.Tensor): 3D tensor with shape <code>[BATCH, CHANNEL, TIME, N_MELS]</code>.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>wav2rec/signal/dsp.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute the melspectrogram of ``x``.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (torch.Tensor): 2D tensor with shape ``[BATCH, TIME]``</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        melspec (torch.Tensor): 3D tensor with shape ``[BATCH, CHANNEL, TIME, N_MELS]``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">meltransform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_db</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize_db</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normalize_db</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_power_to_db</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_db</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_power_to_db</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">S</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Wav2Rec 🎸" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Wav2Rec 🎸
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 - 2021 Tariq Hassan
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

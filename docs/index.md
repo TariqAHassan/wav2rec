@@ -65,7 +65,7 @@ model.fit(my_dataset)
 Once fit, we can load a piece of sample piece of audio
 
 ```python
-waveform = my_dataset.load_audio("my_song.mp3")
+waveform = my_dataset.load_audio(Path("my_song.mp3"))
 ```
 
 and get some recommendations for similar music.

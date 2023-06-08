@@ -17,7 +17,7 @@ in self-supervised neural networks.
 ## Installation
 
 ```shell
-pip install git+git://github.com/TariqAHassan/wav2rec@main
+pip install git+https://github.com/TariqAHassan/wav2rec@main
 ```
 
 Requires Python 3.7+
